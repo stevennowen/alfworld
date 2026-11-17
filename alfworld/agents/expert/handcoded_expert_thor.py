@@ -20,7 +20,7 @@ class PickAndPlaceSimpleThorPolicy(PickAndPlaceSimplePolicy):
         obs_at_curr_recep = self.obs_at_recep[self.curr_recep] if self.curr_recep in self.obs_at_recep else ""
         is_obj_in_obs = "you see" in obs_at_curr_recep and " {} ".format(obj) in obs_at_curr_recep
         at_right_recep = parent in self.curr_recep
-        can_put_object = "put {} in/on {}".format(obj, parent) in admissible_commands_wo_num_ids
+        can_put_object = "move {} to {}".format(obj, parent) in admissible_commands_wo_num_ids
         can_take_object = any("take {}".format(obj) in ac for ac in admissible_commands_wo_num_ids)
         return at_right_recep, can_put_object, can_take_object, is_obj_in_obs
 
@@ -43,7 +43,7 @@ class PickTwoObjAndPlaceThorPolicy(PickTwoObjAndPlacePolicy):
         obs_at_curr_recep = self.obs_at_recep[self.curr_recep] if self.curr_recep in self.obs_at_recep else ""
         is_obj_in_obs = "you see" in obs_at_curr_recep and " {} ".format(obj) in obs_at_curr_recep
         at_right_recep = parent in self.curr_recep
-        can_put_object = "put {} in/on {}".format(obj, parent) in admissible_commands_wo_num_ids
+        can_put_object = "move {} to {}".format(obj, parent) in admissible_commands_wo_num_ids
         can_take_object = any("take {}".format(obj) in ac for ac in admissible_commands_wo_num_ids)
         return at_right_recep, can_put_object, can_take_object, is_obj_in_obs, is_one_object_already_inside_receptacle, trying_to_take_the_same_object
 
@@ -84,7 +84,7 @@ class PickHeatThenPlaceInRecepThorPolicy(PickHeatThenPlaceInRecepPolicy):
         obs_at_curr_recep = self.obs_at_recep[self.curr_recep] if self.curr_recep in self.obs_at_recep else ""
         is_obj_in_obs = "you see" in obs_at_curr_recep and " {} ".format(obj) in obs_at_curr_recep
         at_right_recep = parent in self.curr_recep
-        can_put_object = "put {} in/on {}".format(obj, parent) in admissible_commands_wo_num_ids
+        can_put_object = "move {} to {}".format(obj, parent) in admissible_commands_wo_num_ids
         can_take_object = any("take {}".format(obj) in ac for ac in admissible_commands_wo_num_ids)
         can_heat_object = "heat {} with {}".format(obj, "microwave") in admissible_commands_wo_num_ids
         return at_right_recep, can_heat_object, can_put_object, can_take_object, is_obj_in_obs, is_the_object_agent_holding_hot
@@ -107,7 +107,7 @@ class PickCoolThenPlaceInRecepThorPolicy(PickCoolThenPlaceInRecepPolicy):
         obs_at_curr_recep = self.obs_at_recep[self.curr_recep] if self.curr_recep in self.obs_at_recep else ""
         is_obj_in_obs = "you see" in obs_at_curr_recep and " {} ".format(obj) in obs_at_curr_recep
         at_right_recep = parent in self.curr_recep
-        can_put_object = "put {} in/on {}".format(obj, parent) in admissible_commands_wo_num_ids
+        can_put_object = "move {} to {}".format(obj, parent) in admissible_commands_wo_num_ids
         can_cool_object = "cool {} with {}".format(obj, "fridge") in admissible_commands_wo_num_ids
         can_take_object = any("take {}".format(obj) in ac for ac in admissible_commands_wo_num_ids)
         return at_right_recep, can_cool_object, can_put_object, can_take_object, is_obj_in_obs, is_the_object_agent_holding_cool
@@ -130,7 +130,7 @@ class PickCleanThenPlaceInRecepThorPolicy(PickCleanThenPlaceInRecepPolicy):
         obs_at_curr_recep = self.obs_at_recep[self.curr_recep] if self.curr_recep in self.obs_at_recep else ""
         is_obj_in_obs = "you see" in obs_at_curr_recep and " {} ".format(obj) in obs_at_curr_recep
         at_right_recep = parent in self.curr_recep
-        can_put_object = "put {} in/on {}".format(obj, parent) in admissible_commands_wo_num_ids
+        can_put_object = "move {} to {}".format(obj, parent) in admissible_commands_wo_num_ids
         can_clean_object = "clean {} with {}".format(obj, "sinkbasin") in admissible_commands_wo_num_ids
         can_take_object = any("take {}".format(obj) in ac for ac in admissible_commands_wo_num_ids)
         return at_right_recep, can_clean_object, can_put_object, can_take_object, is_obj_in_obs, is_the_object_agent_holding_isclean

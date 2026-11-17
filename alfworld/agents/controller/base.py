@@ -72,12 +72,42 @@ class BaseAgent(object):
             for recep_id, recep in self.receptacles.items():
                 if 'mask' in recep:
                     recep['mask'] = decompress_mask(recep['mask'])
+                # The precomputed receps.json files shipped with the dataset have no 'closed' field.
+                # Without it, 'go to' raises a KeyError that step() swallows, so the agent moves but
+                # gets an incomplete feedback (or "Nothing happens." at empty receptacles).
+                if 'closed' not in recep:
+                    recep['closed'] = self.is_recep_closed(recep) if recep['object_type'] in constants.OPENABLE_CLASS_LIST else None
+            self.fix_basin_names()
         else:
             self.receptacles = {}
             if self.exhaustive_exploration:
                 self.explore_scene_exhaustively()
             else:
                 self.explore_scene()
+
+    def fix_basin_names(self):
+        '''
+        The precomputed receps.json files label SinkBasin/BathtubBasin receptacles as plain "sink"/"bathtub",
+        while explore_scene() (and the task goals, the expert and "clean ... with sinkbasin") use "sinkbasin".
+        Rename them like explore_scene() does and renumber the affected receptacle types.
+        '''
+        affected = set()
+        for recep in self.receptacles.values():
+            if "Basin" in recep['object_id'] and not recep['object_type'].endswith("Basin"):
+                affected.add(recep['object_type'])
+                recep['object_type'] += "Basin"
+                affected.add(recep['object_type'])
+        counts = {}
+        for recep in self.receptacles.values():
+            if recep['object_type'] in affected:
+                counts[recep['object_type']] = counts.get(recep['object_type'], 0) + 1
+                recep['num_id'] = "%s %d" % (recep['object_type'].lower(), counts[recep['object_type']])
+
+    def is_recep_closed(self, recep):
+        for obj in self.env.last_event.metadata['objects']:
+            if obj['objectId'] == recep['object_id']:
+                return not obj['isOpen']
+        return True
 
     def get_object(self, name, obj_dict):
         for id, obj in obj_dict.items():

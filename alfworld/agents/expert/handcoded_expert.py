@@ -175,7 +175,8 @@ class BasePolicy(object):
                 self.got_inventory_from_recep = " ".join(last_action.split()[-2:])
                 self.inventory.append(inv_obj)
                 self.blacklist_obj(inv_obj)
-            elif "put" in last_action:
+            # placing is "move {obj} to {recep}" in the current command set ("put" in older versions)
+            elif last_action.startswith("put ") or last_action.startswith("move "):
                 inv_obj = self.inventory.pop()
                 self.got_inventory_from_recep = ""
                 self.blacklist_obj(inv_obj)
