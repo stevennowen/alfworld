@@ -5,6 +5,9 @@ def get_environment(env_type):
     elif env_type == 'AlfredThorEnv':
         from alfworld.agents.environment.alfred_thor_env import AlfredThorEnv
         return AlfredThorEnv
+    elif env_type == 'ChainedAlfredThorEnv':
+        from alfworld.agents.environment.alfred_chained_thor_env import ChainedAlfredThorEnv
+        return ChainedAlfredThorEnv
     elif env_type == 'AlfredHybrid':
         from alfworld.agents.environment.alfred_hybrid import AlfredHybrid
         return AlfredHybrid
