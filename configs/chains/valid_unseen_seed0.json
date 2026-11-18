@@ -1,0 +1,794 @@
+{
+ "version": 1,
+ "split": "valid_unseen",
+ "seed": 0,
+ "created": "2026-11-18",
+ "builder": "scripts/build_chain_manifest.py (solver gt, relocate sebelum setiap tugas genap)",
+ "rooms": {
+  "10": {
+   "tasks": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/traj_data.json",
+     "task_desc": "put some peppershaker on drawer",
+     "task_type": "pick_and_place_simple",
+     "object_target": "PepperShaker",
+     "parent_target": "Drawer",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191429_743650/traj_data.json",
+     "task_desc": "put a saltshaker in cabinet",
+     "task_type": "pick_and_place_simple",
+     "object_target": "SaltShaker",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Bowl-None-Cabinet-10/trial_T20190909_061130_844814/traj_data.json",
+     "task_desc": "put a clean bowl in cabinet",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Bowl",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Bowl",
+      "object_name": "Bowl_6f54d42d",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Cabinet-10/trial_T20190906_191429_743650/traj_data.json",
+      "before": [
+       "fridge 1"
+      ],
+      "after": [
+       "countertop 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 9,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Egg-None-Microwave-10/trial_T20190909_120554_888709/traj_data.json",
+     "task_desc": "put a clean egg in microwave",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Egg",
+     "parent_target": "Microwave",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Knife-None-CounterTop-10/trial_T20190909_110347_624008/traj_data.json",
+     "task_desc": "put a clean knife in countertop",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Knife",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Knife",
+      "object_name": "Knife_f88e84d1",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_with_movable_recep-Egg-Bowl-CounterTop-10/trial_T20190912_190125_832581/traj_data.json",
+      "before": [
+       "countertop 3"
+      ],
+      "after": [
+       "sinkbasin 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_221208_560499/traj_data.json",
+     "task_desc": "clean some mug and put it in coffeemachine",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Mug",
+     "parent_target": "CoffeeMachine",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_032434_013084/traj_data.json",
+     "task_desc": "put a clean pan in countertop",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Pan",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": true,
+     "gt_steps": 6,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Plate-None-CounterTop-10/trial_T20190908_213356_017769/traj_data.json",
+     "task_desc": "put a clean plate in countertop",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Plate",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Spatula-None-Drawer-10/trial_T20190907_080730_211959/traj_data.json",
+     "task_desc": "clean some spatula and put it in drawer",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Spatula",
+     "parent_target": "Drawer",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Spatula",
+      "object_name": "Spatula_ef7cb958",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154326_823501/traj_data.json",
+      "before": [
+       "sinkbasin 1"
+      ],
+      "after": [
+       "countertop 3"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Bread-None-CounterTop-10/trial_T20190908_091747_866951/traj_data.json",
+     "task_desc": "cool some bread and put it in countertop",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Bread",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Lettuce-None-CounterTop-10/trial_T20190909_123133_763972/traj_data.json",
+     "task_desc": "cool some lettuce and put it in countertop",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Lettuce",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Lettuce",
+      "object_name": "Lettuce_5e722375",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154326_823501/traj_data.json",
+      "before": [
+       "fridge 1"
+      ],
+      "after": [
+       "garbagecan 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {
+      "goto_nearby": 1,
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_121559_082363/traj_data.json",
+     "task_desc": "cool some mug and put it in cabinet",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Mug",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 9,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_183715_299073/traj_data.json",
+     "task_desc": "cool some mug and put it in coffeemachine",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Mug",
+     "parent_target": "CoffeeMachine",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Mug",
+      "object_name": "Mug_63934229",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/traj_data.json",
+      "before": [
+       "cabinet 6"
+      ],
+      "after": [
+       "fridge 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 12,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Pan-None-CounterTop-10/trial_T20190908_114545_244903/traj_data.json",
+     "task_desc": "put a cool pan in countertop",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Pan",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 11,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Potato-None-Microwave-10/trial_T20190907_033157_424297/traj_data.json",
+     "task_desc": "put a cool potato in microwave",
+     "task_type": "pick_cool_then_place_in_recep",
+     "object_target": "Potato",
+     "parent_target": "Microwave",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Potato",
+      "object_name": "Potato_ccc73403",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154326_823501/traj_data.json",
+      "before": [
+       "microwave 1"
+      ],
+      "after": [
+       "fridge 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-Fridge-10/trial_T20190906_182259_116320/traj_data.json",
+     "task_desc": "put a hot apple in fridge",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Apple",
+     "parent_target": "Fridge",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Apple-None-GarbageCan-10/trial_T20190908_145050_918567/traj_data.json",
+     "task_desc": "heat some apple and put it in garbagecan",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Apple",
+     "parent_target": "GarbageCan",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Apple",
+      "object_name": "Apple_560cdd24",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/traj_data.json",
+      "before": [
+       "fridge 1"
+      ],
+      "after": [
+       "countertop 3"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Cup-None-Cabinet-10/trial_T20190907_083346_800823/traj_data.json",
+     "task_desc": "heat some cup and put it in cabinet",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Cup",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Egg-None-GarbageCan-10/trial_T20190908_113432_673307/traj_data.json",
+     "task_desc": "heat some egg and put it in garbagecan",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Egg",
+     "parent_target": "GarbageCan",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Egg",
+      "object_name": "Egg_fe6a8905",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190906_184021_215264/traj_data.json",
+      "before": [
+       "microwave 1"
+      ],
+      "after": [
+       "countertop 3"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-Cabinet-10/trial_T20190909_021100_341887/traj_data.json",
+     "task_desc": "put a hot mug in cabinet",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Mug",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 9,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Mug-None-CoffeeMachine-10/trial_T20190907_171806_406231/traj_data.json",
+     "task_desc": "put a hot mug in coffeemachine",
+     "task_type": "pick_heat_then_place_in_recep",
+     "object_target": "Mug",
+     "parent_target": "CoffeeMachine",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Mug",
+      "object_name": "Mug_63934229",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-PepperShaker-None-Drawer-10/trial_T20190918_154424_844749/traj_data.json",
+      "before": [
+       "fridge 1"
+      ],
+      "after": [
+       "shelf 3"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 12,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-PepperShaker-None-Drawer-10/trial_T20190908_010306_215435/traj_data.json",
+     "task_desc": "find two peppershaker and put them in drawer",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "PepperShaker",
+     "parent_target": "Drawer",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    }
+   ],
+   "dropped": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-SaltShaker-None-Drawer-10/trial_T20190909_021613_077537/traj_data.json",
+     "task_desc": "put a saltshaker in drawer",
+     "reason": "already_satisfied",
+     "round": 1,
+     "position": 2,
+     "target_full_events": []
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Tomato-None-GarbageCan-10/trial_T20190908_225046_020282/traj_data.json",
+     "task_desc": "put a hot tomato in garbagecan",
+     "reason": "capacity",
+     "round": 1,
+     "position": 24,
+     "target_full_events": [
+      {
+       "step": 7,
+       "command": "move tomato 3 to garbagecan 1",
+       "errors": [
+        "No valid Receptacle found",
+        "No valid positions to place object found"
+       ]
+      }
+     ]
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_cool_then_place_in_recep-Tomato-None-Microwave-10/trial_T20190909_102608_318800/traj_data.json",
+     "task_desc": "put a cool tomato in microwave",
+     "reason": "capacity",
+     "round": 2,
+     "position": 15,
+     "target_full_events": [
+      {
+       "step": 7,
+       "command": "move tomato 1 to microwave 1",
+       "errors": [
+        "No valid Receptacle found",
+        "No valid positions to place object found"
+       ]
+      }
+     ]
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_heat_then_place_in_recep-Potato-None-GarbageCan-10/trial_T20190907_161745_664033/traj_data.json",
+     "task_desc": "put a hot potato in garbagecan",
+     "reason": "capacity",
+     "round": 2,
+     "position": 22,
+     "target_full_events": [
+      {
+       "step": 7,
+       "command": "move potato 1 to garbagecan 1",
+       "errors": [
+        "No valid Receptacle found",
+        "No valid positions to place object found"
+       ]
+      }
+     ]
+    }
+   ],
+   "rounds": 4,
+   "n_unique_goals": 26
+  },
+  "308": {
+   "tasks": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222917_366542/traj_data.json",
+     "task_desc": "examine the alarmclock with the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "AlarmClock",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-Book-None-DeskLamp-308/trial_T20190908_020029_636862/traj_data.json",
+     "task_desc": "look at book under the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "Book",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 4,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-Bowl-None-DeskLamp-308/trial_T20190907_133919_856963/traj_data.json",
+     "task_desc": "look at bowl under the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "Bowl",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": {
+      "object_type": "Bowl",
+      "object_name": "Bowl_e11a5ffa",
+      "source": "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222951_616606/traj_data.json",
+      "before": [
+       "desk 2",
+       "shelf 3"
+      ],
+      "after": [
+       "desk 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-CD-None-DeskLamp-308/trial_T20190908_141942_810052/traj_data.json",
+     "task_desc": "look at cd under the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "CD",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-Mug-None-DeskLamp-308/trial_T20190908_161733_213242/traj_data.json",
+     "task_desc": "look at mug under the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "Mug",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": {
+      "object_type": "Mug",
+      "object_name": "Mug_a12c171b",
+      "source": "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222933_607649/traj_data.json",
+      "before": [
+       "desk 2"
+      ],
+      "after": [
+       "desk 1"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/look_at_obj_in_light-Pencil-None-DeskLamp-308/trial_T20190908_220545_153480/traj_data.json",
+     "task_desc": "examine the pencil with the desklamp",
+     "task_type": "look_at_obj_in_light",
+     "object_target": "Pencil",
+     "parent_target": "",
+     "toggle_target": "DeskLamp",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 4,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-Mug-None-Desk-308/trial_T20190908_125200_737896/traj_data.json",
+     "task_desc": "put a mug in desk",
+     "task_type": "pick_and_place_simple",
+     "object_target": "Mug",
+     "parent_target": "Desk",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "Mug",
+      "object_name": "Mug_a12c171b",
+      "source": "json_2.1.1/valid_unseen/look_at_obj_in_light-AlarmClock-None-DeskLamp-308/trial_T20190908_222951_616606/traj_data.json",
+      "before": [
+       "bed 1"
+      ],
+      "after": [
+       "shelf 5"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 4,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-CD-None-Safe-308/trial_T20190907_050942_897916/traj_data.json",
+     "task_desc": "put two cd in safe",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "CD",
+     "parent_target": "Safe",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 8,
+     "fallbacks": {}
+    }
+   ],
+   "dropped": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-Pencil-None-Shelf-308/trial_T20190908_121952_610012/traj_data.json",
+     "task_desc": "put a pencil in shelf",
+     "reason": "already_satisfied",
+     "round": 1,
+     "position": 7,
+     "target_full_events": []
+    }
+   ],
+   "rounds": 2,
+   "n_unique_goals": 9
+  },
+  "424": {
+   "tasks": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-SoapBottle-None-Toilet-424/trial_T20190907_004321_405868/traj_data.json",
+     "task_desc": "put some soapbottle on toilet",
+     "task_type": "pick_and_place_simple",
+     "object_target": "SoapBottle",
+     "parent_target": "Toilet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-Cabinet-424/trial_T20190908_022321_380927/traj_data.json",
+     "task_desc": "put a clean cloth in cabinet",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "Cloth",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 7,
+     "fallbacks": {
+      "appliance": 1
+     }
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-Cabinet-424/trial_T20190908_214926_337906/traj_data.json",
+     "task_desc": "put a clean soapbar in cabinet",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "SoapBar",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "SoapBar",
+      "object_name": "SoapBar_b68a46ea",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-Plunger-None-Cabinet-424/trial_T20190908_021510_064551/traj_data.json",
+      "before": [
+       "garbagecan 1"
+      ],
+      "after": [
+       "sinkbasin 2"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 6,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-SoapBar-None-CounterTop-424/trial_T20190907_074045_109439/traj_data.json",
+     "task_desc": "put a clean soapbar in countertop",
+     "task_type": "pick_clean_then_place_in_recep",
+     "object_target": "SoapBar",
+     "parent_target": "CounterTop",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 8,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-Cabinet-424/trial_T20190909_081720_491733/traj_data.json",
+     "task_desc": "put two soapbar in cabinet",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "SoapBar",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": {
+      "object_type": "SoapBar",
+      "object_name": "SoapBar_b68a46ea",
+      "source": "json_2.1.1/valid_unseen/pick_and_place_simple-Plunger-None-Cabinet-424/trial_T20190908_021510_064551/traj_data.json",
+      "before": [
+       "countertop 1"
+      ],
+      "after": [
+       "sinkbasin 2"
+      ]
+     },
+     "relocation_failed": false,
+     "gt_steps": 8,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-ToiletPaper-None-Cabinet-424/trial_T20190906_202926_527010/traj_data.json",
+     "task_desc": "find two toiletpaper and put them in cabinet",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "ToiletPaper",
+     "parent_target": "Cabinet",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 4,
+     "fallbacks": {}
+    }
+   ],
+   "dropped": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_clean_then_place_in_recep-Cloth-None-CounterTop-424/trial_T20190908_100632_546757/traj_data.json",
+     "task_desc": "put a clean cloth in countertop",
+     "reason": "capacity",
+     "round": 1,
+     "position": 2,
+     "target_full_events": [
+      {
+       "step": 7,
+       "command": "move cloth 1 to countertop 1",
+       "errors": [
+        "No valid Receptacle found",
+        "No valid positions to place object found"
+       ]
+      }
+     ]
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-SoapBar-None-GarbageCan-424/trial_T20190909_064053_839817/traj_data.json",
+     "task_desc": "put two soapbar in garbagecan",
+     "reason": "capacity",
+     "round": 1,
+     "position": 6,
+     "target_full_events": [
+      {
+       "step": 7,
+       "command": "move soapbar 1 to garbagecan 1",
+       "errors": [
+        "No valid Receptacle found",
+        "No valid positions to place object found"
+       ]
+      }
+     ]
+    }
+   ],
+   "rounds": 2,
+   "n_unique_goals": 8
+  },
+  "219": {
+   "tasks": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-Vase-None-Safe-219/trial_T20190908_205204_244321/traj_data.json",
+     "task_desc": "put some vase on safe",
+     "task_type": "pick_and_place_simple",
+     "object_target": "Vase",
+     "parent_target": "Safe",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 5,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-KeyChain-None-Safe-219/trial_T20190909_011803_423115/traj_data.json",
+     "task_desc": "put two keychain in safe",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "KeyChain",
+     "parent_target": "Safe",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": false,
+     "gt_steps": 9,
+     "fallbacks": {}
+    },
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_two_obj_and_place-Pillow-None-Sofa-219/trial_T20190907_163240_345855/traj_data.json",
+     "task_desc": "put two pillow in sofa",
+     "task_type": "pick_two_obj_and_place",
+     "object_target": "Pillow",
+     "parent_target": "Sofa",
+     "toggle_target": "",
+     "relocate": null,
+     "relocation_failed": true,
+     "gt_steps": 8,
+     "fallbacks": {
+      "put_view": 1
+     }
+    }
+   ],
+   "dropped": [
+    {
+     "task_file": "json_2.1.1/valid_unseen/pick_and_place_simple-Watch-None-Safe-219/trial_T20190907_074524_006355/traj_data.json",
+     "task_desc": "put a watch in safe",
+     "reason": "already_satisfied",
+     "round": 1,
+     "position": 1,
+     "target_full_events": []
+    }
+   ],
+   "rounds": 2,
+   "n_unique_goals": 4
+  }
+ }
+}
