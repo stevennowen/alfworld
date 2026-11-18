@@ -1,6 +1,6 @@
 """Uji ChainedAlfredThorEnv pada FP10 (valid_unseen):
-tugas 1 dikerjakan agen lewat perintah tanpa nomor, tugas 2-3 dikerjakan expert,
-dan mug dipindahkan secara diam-diam sebelum tugas 3."""
+tugas 1 dikerjakan agen lewat perintah tanpa nomor, tugas 2-3 dikerjakan expert.
+Sebelum tugas 3, relocate mug dari coffeemachine harus ditolak dan relocate apel harus berhasil."""
 import glob
 import os
 
@@ -49,11 +49,17 @@ try:
     print("expert:", env.run_expert())
     print("mug sekarang di:", env.gt_object_locations("Mug"))
 
-    # ---- perpindahan mug sebelum tugas 3
+    # ---- perpindahan sebelum tugas 3
     sources = sorted(glob.glob(f"{ROOT}/*-10/trial_*/traj_data.json"))   # semua trial di FP10
+    # satu-satunya mug ada di coffeemachine (wadah bertitik tempel tunggal), jadi harus ditolak
     reloc = env.relocate("Mug", sources)
-    print("\n-- relocate:", reloc)
-    print("mug setelah dipindah:", env.gt_object_locations("Mug"))
+    print("\n-- relocate mug dari coffeemachine (harus None):", reloc)
+    assert reloc is None, "objek di coffeemachine tidak boleh dipindah lewat SetObjectPoses"
+    print("apel sebelum dipindah:", env.gt_object_locations("Apple"))
+    reloc = env.relocate("Apple", sources)
+    print("-- relocate apel:", reloc)
+    assert reloc and reloc["ok"]
+    print("apel setelah dipindah:", env.gt_object_locations("Apple"))
 
     # ---- tugas 3: expert, mug harus dicari di lokasi baru
     t3 = trial("pick_cool_then_place_in_recep-Mug-None-Cabinet-10")
